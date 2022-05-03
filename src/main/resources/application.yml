@@ -1,9 +1,19 @@
 app:
   database:
-    url: "jdbc:postgresql://localhost:5432/postgres"
-    driver : "org.postgresql.Driver"
+#    url: "jdbc:postgresql://localhost:5432/postgres"
+    url: "jdbc:h2:./db"
+#    driver : "org.postgresql.Driver"
     username: "postgres"
     password: "postgres"
+
+spring:
+  jpa:
+    hibenate:
+      ddl-auto: update
+  datasource:
+    url: ${app.database.url}
+    username: ${app.database.username}
+    password: ${app.database.password}
 
 server:
   port: 9090
