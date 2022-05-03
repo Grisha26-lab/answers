@@ -1,0 +1,11 @@
+app:
+  database:
+    url: "jdbc:postgresql://localhost:5432/postgres"
+    driver : "org.postgresql.Driver"
+    username: "postgres"
+    password: "postgres"
+
+server:
+  port: 9090
+
+
